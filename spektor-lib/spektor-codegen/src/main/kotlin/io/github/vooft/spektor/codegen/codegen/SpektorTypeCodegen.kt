@@ -40,9 +40,13 @@ class SpektorTypeCodegen(
             is SpektorType.Array -> LIST.plusParameter(generate(type.itemType))
             is SpektorType.MicroType -> {
                 type.toTypeName().let {
-                    it.copy(
-                        annotations = it.annotations + AnnotationSpec.builder(CONTEXTUAL_ANNOTATION).build()
-                    )
+                    if (type.isContextual) {
+                        it.copy(
+                            annotations = it.annotations + AnnotationSpec.builder(CONTEXTUAL_ANNOTATION).build()
+                        )
+                    } else {
+                        it
+                    }
                 }
             }
 
