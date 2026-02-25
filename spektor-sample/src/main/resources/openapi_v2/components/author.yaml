@@ -1,0 +1,60 @@
+schemas:
+  AuthorCountry:
+    type: string
+    enum: [ US, DE, JP ]
+  Author:
+    type: object
+    properties:
+      id:
+        type: string
+        format: uuid
+      name:
+        type: string
+      additionalDetails:
+        type: object
+      dateOfBirth:
+        type: string
+        format: date
+      dateOfDeath:
+        type: string
+        format: date
+      country:
+        $ref: '#/schemas/AuthorCountry'
+      createdAt:
+        type: string
+        format: date-time
+    required:
+      - id
+      - name
+      - dateOfBirth
+      - country
+      - createdAt
+  AuthorsList:
+    type: object
+    properties:
+      authors:
+        type: array
+        items:
+          $ref: '#/schemas/Author'
+    required:
+      - authors
+  AuthorRequest:
+    type: object
+    properties:
+      name:
+        type: string
+      dateOfBirth:
+        type: string
+        format: date
+      country:
+        $ref: '#/schemas/AuthorCountry'
+      dateOfDeath:
+        type: string
+        format: date
+      additionalDetails:
+        type: object
+    required:
+      - name
+      - dateOfBirth
+      - country
+

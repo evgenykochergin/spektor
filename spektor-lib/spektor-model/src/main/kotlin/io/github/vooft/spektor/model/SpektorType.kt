@@ -30,6 +30,7 @@ sealed interface SpektorType {
                     StringFormat.PLAIN -> false
                     StringFormat.UUID,
                     StringFormat.URI,
+                    StringFormat.YEAR_MONTH,
                     StringFormat.DATE_TIME,
                     StringFormat.DATE -> true
                 }
@@ -59,6 +60,7 @@ sealed interface SpektorType {
             UUID("uuid"),
             URI("uri"),
             DATE_TIME("date-time"),
+            YEAR_MONTH("year-month"),
             DATE("date");
 
             companion object {

@@ -25,6 +25,7 @@ object Mappers {
         imageLink = imageLink,
         author = authors.single { it.id == authorId }.toDto(),
         price = price,
-        createdAt = createdAt
+        createdAt = createdAt,
+        yearMonth = yearMonth,
     )
 }

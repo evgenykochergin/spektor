@@ -19,6 +19,7 @@ import java.math.BigDecimal
 import java.net.URI
 import java.time.Instant
 import java.time.LocalDate
+import java.time.YearMonth
 import java.util.UUID
 
 class SpektorTypeCodegen(
@@ -89,6 +90,7 @@ class SpektorTypeCodegen(
             SpektorType.MicroType.StringFormat.PLAIN -> STRING
             SpektorType.MicroType.StringFormat.UUID -> UUID::class.asClassName()
             SpektorType.MicroType.StringFormat.URI -> URI::class.asClassName()
+            SpektorType.MicroType.StringFormat.YEAR_MONTH -> YearMonth::class.asClassName()
             SpektorType.MicroType.StringFormat.DATE_TIME -> Instant::class.asClassName()
             SpektorType.MicroType.StringFormat.DATE -> LocalDate::class.asClassName()
         }

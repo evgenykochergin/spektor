@@ -1,0 +1,12 @@
+schemas:
+  Money:
+    type: object
+    properties:
+      minorUnits:
+        type: integer
+      currency:
+        type: string
+    required:
+      - minorUnits
+      - currency
+

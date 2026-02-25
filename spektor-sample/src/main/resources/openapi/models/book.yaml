@@ -25,6 +25,9 @@ components:
         createdAt:
           type: string
           format: date-time
+        yearMonth:
+          type: string
+          format: year-month
         weight:
           type: number
       required:
@@ -33,6 +36,7 @@ components:
         - imageLink
         - author
         - createdAt
+        - yearMonth
     BooksList:
       type: object
       properties:

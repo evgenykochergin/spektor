@@ -4,6 +4,7 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import java.net.URI
 import java.time.Instant
+import java.time.YearMonth
 import java.util.UUID
 
 data class BookModel(
@@ -13,7 +14,8 @@ data class BookModel(
     val imageLink: URI,
     val authorId: AuthorId,
     val price: Money?,
-    val createdAt: Instant
+    val createdAt: Instant,
+    val yearMonth: YearMonth,
 )
 
 @Serializable

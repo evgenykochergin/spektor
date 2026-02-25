@@ -207,6 +207,10 @@ private val expected = SpektorSchema(
                     type = StringMicroType(format = StringFormat.URI),
                     required = true
                 ),
+                "yearMonth" to SpektorType.RequiredWrapper(
+                    type = StringMicroType(format = StringFormat.YEAR_MONTH),
+                    required = true
+                ),
                 "author" to SpektorType.RequiredWrapper(
                     type = SpektorType.Ref(
                         file = authorModelFile.toAbsolutePath().normalize(),
