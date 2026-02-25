@@ -15,6 +15,7 @@ import kotlinx.serialization.modules.SerializersModule
 import java.net.URI
 import java.time.Instant
 import java.time.LocalDate
+import java.time.YearMonth
 import java.util.UUID
 
 fun Application.configureSerialization() {
@@ -36,6 +37,14 @@ fun Application.configureSerialization() {
                             override val descriptor = PrimitiveSerialDescriptor("LocalDate", PrimitiveKind.STRING)
                             override fun serialize(encoder: Encoder, value: LocalDate) = encoder.encodeString(value.toString())
                             override fun deserialize(decoder: Decoder): LocalDate = LocalDate.parse(decoder.decodeString())
+                        }
+                    )
+                    contextual(
+                        kClass = YearMonth::class,
+                        serializer = object : KSerializer<YearMonth> {
+                            override val descriptor = PrimitiveSerialDescriptor("YearMonth", PrimitiveKind.STRING)
+                            override fun serialize(encoder: Encoder, value: YearMonth) = encoder.encodeString(value.toString())
+                            override fun deserialize(decoder: Decoder): YearMonth = YearMonth.parse(decoder.decodeString())
                         }
                     )
                     contextual(

@@ -11,6 +11,7 @@ import spektor.example.models.book.BookDto
 import spektor.example.models.book.BookRequestDto
 import java.net.URI
 import java.time.Instant
+import java.time.YearMonth
 import java.util.UUID
 
 class BookRestService(
@@ -25,7 +26,8 @@ class BookRestService(
             imageLink = URI.create("https://books.net/images/${UUID.randomUUID()}.jpg"),
             authorId = request.authorId,
             price = request.price,
-            createdAt = Instant.now()
+            createdAt = Instant.now(),
+            yearMonth = YearMonth.now(),
         )
 
         books.addBook(book)
