@@ -13,14 +13,14 @@ gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-pu
 
 kotlin-gradle-plugin-api = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin-api", version.ref = "kotlin" }
 
-swagger-parser = { module = "io.swagger.parser.v3:swagger-parser", version = "2.1.37" }
+swagger-parser = { module = "io.swagger.parser.v3:swagger-parser", version = "2.1.38" }
 kotlinpoet = { module = "com.squareup:kotlinpoet", version = "2.2.0" }
 
 kotest-assertions = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
 kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
-junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version = "5.14.2" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version = "5.14.3" }
 
-kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version = "7.0.14" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version = "8.0.01" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version = "2.0.17" }
 kotlinx-dateime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.6.2" }
 
@@ -43,7 +43,7 @@ plugin-publish = { id = "com.gradle.plugin-publish", version = "2.0.0" }
 buildconfig = { id = "com.github.gmazzo.buildconfig", version = "6.0.7" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
-openapi = { id = "org.openapi.generator", version = "7.19.0" }
+openapi = { id = "org.openapi.generator", version = "7.20.0" }
 
 [bundles]
 ktor = ["ktor-server-content-negotiation", "ktor-server-core", "ktor-serialization-kotlinx-json", "ktor-server-auth", "ktor-server-cio", "ktor-server-config-yaml", "ktor-server-di"]
